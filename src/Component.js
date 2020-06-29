@@ -4,7 +4,8 @@ import config from '../config';
 
 const socket = socketIOClient(config.server);
 
-const Component = ({initialData}) => {
+const Component = ({initialData, host}) => {
+
   const [data, setData] = useState(initialData);
   const [field, setField] = useState('');
 
