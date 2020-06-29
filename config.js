@@ -1,3 +1,3 @@
 export default {
-  server: 'http://localhost:3000'
+  server: 'https://websockets-example-chat.angelarsd.vercel.app/'
 }
