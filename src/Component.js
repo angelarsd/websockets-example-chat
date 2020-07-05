@@ -4,16 +4,15 @@ import config from '../config';
 
 const socket = socketIOClient(config.server);
 
-const Component = ({initialData, host}) => {
+const Component = ({initialData, room}) => {
 
   const [data, setData] = useState(initialData);
   const [field, setField] = useState('');
 
   useEffect(() => {
-    socket.on('message', dataUpdate => {
+    socket.emit('join', room).on('message', dataUpdate => {
       setData(dataUpdate);
     });
-
   }, [initialData]);
 
   const handleSubmit = (e) => {
