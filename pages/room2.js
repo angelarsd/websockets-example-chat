@@ -4,7 +4,7 @@ import Component from "../src/Component";
 
 const room = 'room2';
 
-const HomePage = ({initialData}) => <Component initialData={initialData} room={room}/>
+const HomePage = ({initialData}) => <Component initialData={initialData} room={room} title="Form 2"/>
 
 HomePage.getInitialProps = async ({req}) => {
   const host = `http://${req.headers.host}`;

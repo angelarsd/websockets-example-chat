@@ -4,7 +4,7 @@ import config from '../config';
 
 const socket = socketIOClient(config.server);
 
-const Component = ({initialData, room}) => {
+const Component = ({initialData, room, title}) => {
 
   const [data, setData] = useState(initialData);
   const [field, setField] = useState('');
@@ -25,6 +25,7 @@ const Component = ({initialData, room}) => {
 
   return (
     <div>
+      <h3>{title}</h3>
       <ul>
         {data.map(message =>
           <li key={message.id}>{message.text}</li>

@@ -16,6 +16,7 @@ const Component = ({initialData}) => {
 
   return (
     <div>
+      <h2>Admin</h2>
       {Object.keys(data).map((room, i) =>
         <>
           <h3>Form {i + 1}</h3>
