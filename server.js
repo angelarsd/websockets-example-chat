@@ -10,11 +10,11 @@ const ip = require('ip');
 let dataSocket = {
   'room1': [{
     id: 1,
-    text: 'Hola1',
+    text: 'Hola 1',
   }],
   'room2': [{
     id: 1,
-    text: 'Hola2',
+    text: 'Hola 2',
   }]
 }
 
