@@ -45,7 +45,7 @@ nextApp.prepare().then(() => {
     return nextHandler(req, res);
   });
 
-  server.listen(3000, (err) => {
+  server.listen(process.env.PORT || 3977, (err) => {
     if (err) process.exit(0);
     console.log(`> On your local: http://localhost:3000`);
     console.log(`> On your network: http://${ip.address()}:3000`);
